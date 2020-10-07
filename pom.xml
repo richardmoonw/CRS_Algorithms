@@ -12,7 +12,7 @@
 	<artifactId>algorithms</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>algorithms</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Project gathering all the exercises from the Algorithm Toolbox course.</description>
 
 	<properties>
 		<java.version>11</java.version>
