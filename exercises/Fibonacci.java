@@ -10,9 +10,10 @@ class Fibonacci {
         Scanner input = new Scanner(System.in);
 
         // Ask the user for a number.
-        int position = input.nextInt();
+        int position;
+        position = input.nextInt();
 
-        // Calculate the result of the Fibonacci sequence at the given position.
+        // Calculate the result the number-th element of the Fibonacci sequence.
         int result = calculateFibonacci(position);
 
         // Print the result on screen and close the Scanner.
@@ -20,14 +21,26 @@ class Fibonacci {
         input.close();
     } 
 
-    // Method used to calculate Fibonacci recursively. (It is not the best solution but it
-    // is the requirement [despite it is asked to develop a efficient algorithm and this is not])
+    // Method used to calculate Fibonacci iteratively.
     static int calculateFibonacci(int number) {
+
         if (number <= 1) {
             return number;
         }
-        else {
-            return calculateFibonacci(number - 1) + calculateFibonacci(number - 2);
+
+        // Declare the first Fibonacci numbers.
+        int previous = 0;
+        int current = 1;
+        int temp;
+
+        // Find the number-th element of the Fibonacci sequence.
+        for (int i = 2; i <= number; i++) {
+            temp = previous;
+            previous = current;
+            current = previous + temp;
         }
+        
+        // Return the result.
+        return current;
     }
 }
