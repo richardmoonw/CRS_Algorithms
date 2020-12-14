@@ -2,12 +2,11 @@
 // the maximum product of two distinct numbers in a sequence of non-negative integers. 
 // It should work in less than one second even on huge datasets.
 // @author: Ricardo Luna.
-package exercises;
 
 import java.util.Scanner;
 import java.util.Vector;
 
-class MaximumPairwiseProduct {
+class Introduction_MaximumPairwiseProduct {
 
 	public static void main(String[] args) {
 

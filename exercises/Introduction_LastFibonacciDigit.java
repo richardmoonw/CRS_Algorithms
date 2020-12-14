@@ -3,7 +3,7 @@
 
 import java.util.Scanner;
 
-public class LastFibonacciDigit {
+public class Introduction_LastFibonacciDigit {
     
     public static void main(String[] args) {
         

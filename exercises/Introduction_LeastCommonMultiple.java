@@ -3,7 +3,7 @@
 // two integers a and b, find their least common multiple.
 import java.util.Scanner;
 
-public class LeastCommonMultiple {
+public class Introduction_LeastCommonMultiple {
     public static void main (String[] args){
 
         // Create the Scanner for user input.
