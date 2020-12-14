@@ -1,7 +1,7 @@
 // The goal of this code problem is to implement an algorithm for the fractional knapsack problem
 // (in its greedy approach).
 
-import java.util.Scanner;
+import java.util.*;
 
 public class Greedy_MaximumValue {
     public static void main(String[] args) {
@@ -9,28 +9,68 @@ public class Greedy_MaximumValue {
         // Create the scanner for user input.
         Scanner input = new Scanner(System.in);
 
+        int number_of_items, capacity, value_column, weight_column, value_per_unit_column;
+        float value;
+        value = 0.0f;
+
+        // The first array position of each item is the value.
+        value_column = 0;
+
+        // The second array position of each item is the weight.
+        weight_column = 1;
+
+        // The third array position of each item is the value per unit of weight.
+        value_per_unit_column = 2;
+
         // Ask the user to enter the number of items and the capacity of the knapsack.
-        int items, capacity;
-        items = input.nextInt();
+        number_of_items = input.nextInt();
         capacity = input.nextInt();
 
         // Declare the arrays to store the value and weight of each item.
-        int[] values = new int[items];
-        int[] weights = new int[items];
+        float[][] items = new float[number_of_items][3];
 
         // Ask the user to enter the weight and value of each item.
-        for(int i=0; i<items; i++) {
-            values[i] = input.nextInt();
-            weights[i] = input.nextInt();
+        for(int i=0; i<number_of_items; i++) {
+            items[i][value_column] = input.nextFloat();
+            items[i][weight_column] = input.nextFloat();
+            items[i][value_per_unit_column] = (float)items[i][value_column]/(float)items[i][weight_column];
         }
 
         input.close();
 
-        // Define an array to store the value per unit of weight of each given item.
-        float[] value_per_unit = new float[items];
-        for(int i=0; i<items; i++) {
-            value_per_unit[i] = (float)values[i]/(float)weights[i];
-            System.out.println(value_per_unit[i]);
+        // Sort the items by their value per weight unit.
+        sortByColumn(items, value_per_unit_column);
+
+        int current_item = 0;
+        while(capacity > 0) {
+            if(items[current_item][weight_column] <= capacity) {
+                value += items[current_item][value_column];
+                capacity -= items[current_item][weight_column];
+                current_item++;
+            } else {
+                value += (float)capacity * items[current_item][value_per_unit_column];
+                capacity = 0;
+            }
         }
+        
+        System.out.println(value);  
     }    
+
+    // Function to sort by column.
+    public static void sortByColumn(float items[][], int column) {
+
+        // Using built-in sort function Arrays.sort
+        Arrays.sort(items, new Comparator<float[]>() {
+            
+            // Compare values according to column.
+            @Override
+            public int compare (final float[] element1, final float[] element2) {
+
+                if(element1[column] < element2[column])
+                    return 1;
+                else
+                    return -1;
+            }
+        });
+    }
 }
