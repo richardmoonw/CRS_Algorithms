@@ -42,12 +42,17 @@ public class Greedy_MaximumValue {
         sortByColumn(items, value_per_unit_column);
 
         int current_item = 0;
-        while(capacity > 0) {
+
+        // While the bag is not full and there are items remaining.
+        while(capacity > 0 && current_item < number_of_items) {
+            // If the item fits perfectly in the bag.
             if(items[current_item][weight_column] <= capacity) {
                 value += items[current_item][value_column];
                 capacity -= items[current_item][weight_column];
                 current_item++;
-            } else {
+            }
+            // If only a part of the item can be added to the bag. 
+            else {
                 value += (float)capacity * items[current_item][value_per_unit_column];
                 capacity = 0;
             }
