@@ -3,15 +3,15 @@
 
 import java.util.*;
 
-public class Greedy_MaximumValue {
+public class MaximumValue {
     public static void main(String[] args) {
 
         // Create the scanner for user input.
         Scanner input = new Scanner(System.in);
 
         int number_of_items, capacity, value_column, weight_column, value_per_unit_column;
-        float value;
-        value = 0.0f;
+        double value;
+        value = 0;
 
         // The first array position of each item is the value.
         value_column = 0;
@@ -27,13 +27,13 @@ public class Greedy_MaximumValue {
         capacity = input.nextInt();
 
         // Declare the arrays to store the value and weight of each item.
-        float[][] items = new float[number_of_items][3];
+        double[][] items = new double[number_of_items][3];
 
         // Ask the user to enter the weight and value of each item.
         for(int i=0; i<number_of_items; i++) {
-            items[i][value_column] = input.nextFloat();
-            items[i][weight_column] = input.nextFloat();
-            items[i][value_per_unit_column] = (float)items[i][value_column]/(float)items[i][weight_column];
+            items[i][value_column] = input.nextDouble();
+            items[i][weight_column] = input.nextDouble();
+            items[i][value_per_unit_column] = (double)items[i][value_column]/(double)items[i][weight_column];
         }
 
         input.close();
@@ -53,7 +53,7 @@ public class Greedy_MaximumValue {
             }
             // If only a part of the item can be added to the bag. 
             else {
-                value += (float)capacity * items[current_item][value_per_unit_column];
+                value += (double)capacity * items[current_item][value_per_unit_column];
                 capacity = 0;
             }
         }
@@ -62,14 +62,14 @@ public class Greedy_MaximumValue {
     }    
 
     // Function to sort by column.
-    public static void sortByColumn(float items[][], int column) {
+    public static void sortByColumn(double items[][], int column) {
 
         // Using built-in sort function Arrays.sort
-        Arrays.sort(items, new Comparator<float[]>() {
+        Arrays.sort(items, new Comparator<double[]>() {
             
             // Compare values according to column.
             @Override
-            public int compare (final float[] element1, final float[] element2) {
+            public int compare (final double[] element1, final double[] element2) {
 
                 if(element1[column] < element2[column])
                     return 1;

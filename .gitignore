@@ -1,6 +1,9 @@
 # Class files
 exercises/*.class
+
+# Directories' Files
 .DS_Store
+*/.DS_Store
 
 ### VS Code ###
 .vscode/

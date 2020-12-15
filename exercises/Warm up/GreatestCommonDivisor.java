@@ -3,7 +3,7 @@
 
 import java.util.Scanner;
 
-public class Introduction_GreatestCommonDivisor {
+public class GreatestCommonDivisor {
     
     public static void main(String[] args) {
 

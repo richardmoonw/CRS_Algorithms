@@ -9,7 +9,17 @@ sense to proceed greedily; how dynamic programming is used in genomic studies. T
 solving computational problems, designing new algorithms, and implementing solutions efficiently 
 (so that they run in less than a second).
 
-## Content:
+## Content Files
+
+### Week 1-2. Warm up
 1. Sum.java
-2. MaximumPairwiseProduct
+2. MaximumPairwiseProduct.java
 3. Fibonacci.java
+4. LastFibonacciDigit.java
+5. GreatestCommonDivisor.java
+6. LeastCommonMultiple.java
+
+### Week 3. Greedy Algorithms
+7. MoneyChange.java
+8. MaximumValue.java (knapsack problem).
+9. CarFueling.java

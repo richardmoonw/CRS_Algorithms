@@ -6,7 +6,7 @@
 import java.util.Scanner;
 import java.util.Vector;
 
-class Introduction_MaximumPairwiseProduct {
+public class MaximumPairwiseProduct {
 
 	public static void main(String[] args) {
 

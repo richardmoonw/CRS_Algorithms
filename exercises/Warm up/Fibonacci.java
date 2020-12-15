@@ -3,7 +3,7 @@
 
 import java.util.Scanner;
 
-class Introduction_Fibonacci {
+public class Fibonacci {
     public static void main(String[] args) {
 
         // Create the scanner for user input.
