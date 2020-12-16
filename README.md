@@ -18,6 +18,7 @@ solving computational problems, designing new algorithms, and implementing solut
 4. LastFibonacciDigit.java
 5. GreatestCommonDivisor.java
 6. LeastCommonMultiple.java
+7. FibonnaciNumbersAgain.java (Pisano Period)
 
 ### Week 3. Greedy Algorithms
 7. MoneyChange.java

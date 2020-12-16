@@ -1,7 +1,6 @@
 // In this programming challenge, your goal is to implement a program that finds 
 // the maximum product of two distinct numbers in a sequence of non-negative integers. 
 // It should work in less than one second even on huge datasets.
-// @author: Ricardo Luna.
 
 import java.util.Scanner;
 import java.util.Vector;
