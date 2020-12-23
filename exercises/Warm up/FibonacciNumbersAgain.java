@@ -72,7 +72,14 @@ public class FibonacciNumbersAgain {
         int temp, previous, current;
 
         previous = 0;
-        current =1;
+        current = 1;
+
+        // If the Fibonacci number requested is F0 or F1, then return the values directly.
+        if(number == 0) {
+            return 0;
+        } else if (number == 1) {
+            return 1;
+        }
 
         // If you wanna calculate the Fibonacci of a given number X mod Y, you can caculate it and its
         // predecessors given the formula:
