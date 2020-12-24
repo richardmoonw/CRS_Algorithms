@@ -1,3 +1,6 @@
+// We would like to find the last digit of a partial sum of Fibonacci numbers: 
+// Fm +  Fm+1 + Fm + ... + Fn.
+
 import java.util.Scanner;
 
 public class LastDigitSumFibonacciNumbersAgain {

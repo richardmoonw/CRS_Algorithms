@@ -11,18 +11,24 @@ solving computational problems, designing new algorithms, and implementing solut
 
 ## Content Files
 
-### Week 1-2. Warm up
+### Week 1. Introduction
+0. ProblemsDefinition.pdf
 1. Sum.java
 2. MaximumPairwiseProduct.java
-3. Fibonacci.java
-4. LastFibonacciDigit.java
-5. GreatestCommonDivisor.java
-6. LeastCommonMultiple.java
-7. FibonnaciNumbersAgain.java (Pisano Period)
-8. LastDigitSumFibonacciNumbers.java
-9. LastDigitSumFibonacciNumbersAgain.java
+
+### Week 2. Warm up
+0. ProblemsDefinition.pdf
+1. Fibonacci.java
+2. LastFibonacciDigit.java
+3. GreatestCommonDivisor.java
+4. LeastCommonMultiple.java
+5. FibonnaciNumbersAgain.java (Pisano Period)
+6. LastDigitSumFibonacciNumbers.java
+7. LastDigitSumFibonacciNumbersAgain.java
+10. LastDigitSumSquaresFibonacciNumbers.java
 
 ### Week 3. Greedy Algorithms
-10. MoneyChange.java
-11. MaximumValue.java (knapsack problem).
-12. CarFueling.java
+0. ProblemsDefinition.pdf
+1. MoneyChange.java
+2. MaximumValue.java (knapsack problem).
+3. CarFueling.java
