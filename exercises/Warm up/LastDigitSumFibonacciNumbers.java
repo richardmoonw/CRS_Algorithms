@@ -10,8 +10,8 @@ public class LastDigitSumFibonacciNumbers {
         // Create the scanner for user input.
         Scanner input = new Scanner(System.in);
 
-        long huge_number;
-        int pisano_period_of_10, number_of_chunks, last_chunk_size, sum_last_digit;
+        long huge_number, number_of_chunks, last_chunk_size;
+        int pisano_period_of_10, sum_last_digit;
 
         // The Pisano Period of 10 is 60.
         pisano_period_of_10 = 60;
@@ -33,26 +33,19 @@ public class LastDigitSumFibonacciNumbers {
         // the others.
         // The reason for using the Pisano Period of 10 is because any number 
         // modulo 10 gives us its last digit.
-        number_of_chunks = (int) huge_number / pisano_period_of_10;
-        last_chunk_size = (int) huge_number % pisano_period_of_10;
+        number_of_chunks = huge_number / pisano_period_of_10;
+        last_chunk_size = huge_number % pisano_period_of_10;
 
         // Calculate the last digits' sum of a chunk.
         sum_last_digit = calculateLastDigitOfFibonacciSum(pisano_period_of_10 - 1);
 
-        // Calculate the last digit's sum of all the chunks and reset the variables used 
-        // to calculate the sum.
-        sum_last_digit = (number_of_chunks * sum_last_digit) % 10;
+        // Calculate the last digit's sum of all the chunks.
+        sum_last_digit = (int) ((number_of_chunks % 10) * (sum_last_digit % 10)) % 10;
 
         // Add the last digits' sum of the last chunk.
-        if (last_chunk_size == 1) { 
-            sum_last_digit = (sum_last_digit + 1) % 10;
-        }
-        else {
-            sum_last_digit = (sum_last_digit + calculateLastDigitOfFibonacciSum(last_chunk_size)) % 10;
-        }
+        sum_last_digit = (sum_last_digit + calculateLastDigitOfFibonacciSum((int) last_chunk_size)) % 10;
         
         System.out.println(sum_last_digit);
-        
     }
 
     // Method used to calculate the addition of the last digits of a Fibonacci sequence.
@@ -61,6 +54,13 @@ public class LastDigitSumFibonacciNumbers {
         sum_last_digit = 0;
         previous = 0;
         current = 1;
+
+        // If the Fibonacci last digit sum requested is for F0 or F1, then return the values directly.
+        if (number == 0) {
+            return 0;
+        } else if (number == 1) {
+            return 1;
+        }
 
         for(int i = 2; i <= number; i++) {
 

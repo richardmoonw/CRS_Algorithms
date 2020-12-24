@@ -19,8 +19,10 @@ solving computational problems, designing new algorithms, and implementing solut
 5. GreatestCommonDivisor.java
 6. LeastCommonMultiple.java
 7. FibonnaciNumbersAgain.java (Pisano Period)
+8. LastDigitSumFibonacciNumbers.java
+9. LastDigitSumFibonacciNumbersAgain.java
 
 ### Week 3. Greedy Algorithms
-7. MoneyChange.java
-8. MaximumValue.java (knapsack problem).
-9. CarFueling.java
+10. MoneyChange.java
+11. MaximumValue.java (knapsack problem).
+12. CarFueling.java
