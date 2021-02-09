@@ -5,7 +5,7 @@
 
 import java.util.*;
 
-public class CarFueling {
+public class Exercise03_CarFueling {
 
     public static void main(String[] args) {
 

@@ -3,7 +3,7 @@
 
 import java.util.*;
 
-public class MaximumValue {
+public class Exercise02_MaximumValueLoot {
     public static void main(String[] args) {
 
         // Create the scanner for user input.

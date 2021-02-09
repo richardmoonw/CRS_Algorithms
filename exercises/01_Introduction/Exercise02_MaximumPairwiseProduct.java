@@ -5,7 +5,7 @@
 import java.util.Scanner;
 import java.util.Vector;
 
-public class MaximumPairwiseProduct {
+public class Exercise02_MaximumPairwiseProduct {
 
 	public static void main(String[] args) {
 

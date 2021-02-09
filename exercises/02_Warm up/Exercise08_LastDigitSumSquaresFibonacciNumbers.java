@@ -2,7 +2,7 @@
 
 import java.util.Scanner;
 
-public class LastDigitSumSquaresFibonacciNumbers {
+public class Exercise08_LastDigitSumSquaresFibonacciNumbers {
     
     public static void main (String[] args) {
 

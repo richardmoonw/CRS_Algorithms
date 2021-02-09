@@ -3,7 +3,7 @@
 // @author: Ricardo Luna.
 import java.util.Scanner;
 
-class Sum {
+class Exercise01_Sum {
 	public static void main (String[] args) {
 		
 		// Create the input to enter data. 

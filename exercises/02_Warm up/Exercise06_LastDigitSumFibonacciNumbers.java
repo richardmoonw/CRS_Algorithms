@@ -3,7 +3,7 @@
 
 import java.util.Scanner;
 
-public class LastDigitSumFibonacciNumbers {
+public class Exercise06_LastDigitSumFibonacciNumbers {
 
     public static void main(String[] args) {
 

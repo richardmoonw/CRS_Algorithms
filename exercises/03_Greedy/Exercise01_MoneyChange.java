@@ -3,7 +3,7 @@
 
 import java.util.Scanner;
 
-public class MoneyChange {
+public class Exercise01_MoneyChange {
     public static void main(String[] args) {
         
         // Create the scanner for user input.

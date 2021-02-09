@@ -5,7 +5,7 @@
 import java.util.Scanner;
 
 
-public class FibonacciNumbersAgain {
+public class Exercise05_FibonacciNumberAgain {
     
     public static void main(String[] args) {
         

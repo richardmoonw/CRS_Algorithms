@@ -3,7 +3,7 @@
 
 import java.util.Scanner;
 
-public class LastFibonacciDigit {
+public class Exercise02_LastDigitLargeFibonacciNumber {
     
     public static void main(String[] args) {
         
