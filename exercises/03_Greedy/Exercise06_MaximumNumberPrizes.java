@@ -20,6 +20,8 @@ public class Exercise06_MaximumNumberPrizes {
 
         numberOfCandies = input.nextInt();
 
+        input.close();
+
         Vector<Integer> candiesPrizes = new Vector<>();
         int currentPrize = 1;
         long leftoverCandies = 0;
