@@ -1,4 +1,5 @@
 # Algorithmic Toolbox Course
+------
 
 ## Overview:
 The course covered basic algorithmic techniques and ideas for computational problems arising 
@@ -12,23 +13,27 @@ solving computational problems, designing new algorithms, and implementing solut
 ## Content Files
 
 ### Week 1. Introduction
-0. ProblemsDefinition.pdf
-1. Sum.java
-2. MaximumPairwiseProduct.java
+1. Exercise01_Sum.java
+2. Exercise02_MaximumPairwiseProduct.java
+3. ProblemsDefinition.pdf
 
 ### Week 2. Warm up
-0. ProblemsDefinition.pdf
-1. Fibonacci.java
-2. LastFibonacciDigit.java
-3. GreatestCommonDivisor.java
-4. LeastCommonMultiple.java
-5. FibonnaciNumbersAgain.java (Pisano Period)
-6. LastDigitSumFibonacciNumbers.java
-7. LastDigitSumFibonacciNumbersAgain.java
-10. LastDigitSumSquaresFibonacciNumbers.java
+1. Exercise01_Fibonacci.java
+2. Exercise02_LastFibonacciDigit.java
+3. Exercise03_GreatestCommonDivisor.java
+4. Exercise04_LeastCommonMultiple.java
+5. Exercise05_FibonnaciNumbersAgain.java (Pisano Period)
+6. Exercise06_LastDigitSumFibonacciNumbers.java
+7. Exercise07_LastDigitSumFibonacciNumbersAgain.java
+8. Exercise08_LastDigitSumSquaresFibonacciNumbers.java
+9. ProblemsDefinition.pdf
 
 ### Week 3. Greedy Algorithms
-0. ProblemsDefinition.pdf
-1. MoneyChange.java
-2. MaximumValue.java (knapsack problem).
-3. CarFueling.java
+1. Exercise01_MoneyChange.java
+2. Exercise02_MaximumValueLoot.java (knapsack problem).
+3. Exercise03_CarFueling.java
+4. Exercise04_MaximumAdvertisementRevenue.java
+5. Exercise05_CollectingSignatures.java
+6. Exercise06_MaximumNumberPrizes.java
+7. Exercise07_MaximumSalary.java
+8. ProblemsDefinition.pdf

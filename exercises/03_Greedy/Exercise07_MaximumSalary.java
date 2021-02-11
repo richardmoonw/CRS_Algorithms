@@ -6,32 +6,18 @@ import java.util.*;
 
 public class Exercise07_MaximumSalary {
     
+    // This function returns TRUE if the candidate has to be the new maximum value, or FALSE if
+    // the maximum value does not have to change.
     public static boolean isGreaterThan(String candidate, String maxValue) {
 
-        boolean isGreater = false;
-        int candidateNumeric = Integer.parseInt(candidate);
-        int maxValueNumeric = Integer.parseInt(maxValue);
+        // Create two Strings to generate the 2 possible permutations for the candidate and the 
+        // current max value. Theorically, we have to choose the candidate as the new max value 
+        // if it produces a larger number when being concatenated before the current max value 
+        // than if it is concatenated after it.
+        String newCandidate = candidate + maxValue;
+        String newMaxValue = maxValue + candidate;
 
-        // If both numbers have the same length, just return true if the candidate is greater than
-        // the current max value.
-        if(candidate.length() == maxValue.length()) {
-            isGreater = candidateNumeric > maxValueNumeric ? true : false;
-        } else {
-
-            int minimumSize = candidate.length() < maxValue.length() ? candidate.length() : maxValue.length();  
-            for(int i=0; i<minimumSize; i++) {
-                if((int) candidate.charAt(i) < (int) maxValue.charAt(i)) {
-                    return isGreater;
-                }
-            }
-
-            if(candidate.length() == minimumSize) {
-                isGreater = (int) maxValue.charAt(minimumSize) >= (int) candidate.charAt(0) ? false : true;
-            } else {
-                isGreater = (int) candidate.charAt(minimumSize) >= (int) maxValue.charAt(0) ? true : false;
-            }
-            
-        }
+        boolean isGreater = Integer.parseInt(newCandidate) > Integer.parseInt(newMaxValue) ? true : false;
 
         return isGreater;
     }
@@ -66,6 +52,7 @@ public class Exercise07_MaximumSalary {
                 if(numbers.elementAt(i) == maxValue) {
                     continue;
                 } else {
+                    // If the candidate can produce a higher number than the current max value.
                     if(isGreaterThan(Integer.toString(numbers.elementAt(i)), Integer.toString(maxValue))) {
                         maxValue = numbers.elementAt(i);
                         maxValueIndex = i;
@@ -75,12 +62,15 @@ public class Exercise07_MaximumSalary {
 
             }
 
+            // Remove the current max value from the vector, append it to the result string and restore
+            // the values for the next iteration.
             numbers.remove(maxValueIndex);
             highestNumber = highestNumber + Integer.toString(maxValue);
             maxValue = 0;
             maxValueIndex = -1;
         }
         
+        // Print the result.
         System.out.println(highestNumber);
         
     }
