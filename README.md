@@ -37,3 +37,6 @@ solving computational problems, designing new algorithms, and implementing solut
 6. Exercise06_MaximumNumberPrizes.java
 7. Exercise07_MaximumSalary.java
 8. ProblemsDefinition.pdf
+
+### Week 4. Divide and Conquer Algorithms
+1. Exercise01_BinarySearch.java
