@@ -1,5 +1,5 @@
 # Class files
-exercises/*.class
+exercises/*/*.class
 
 # Directories' Files
 .DS_Store
